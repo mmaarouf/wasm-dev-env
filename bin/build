@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+tagname=$1
+if [[ -z $tagname ]];
+then
+  echo 'Usage: ./bin/build [tagname]'
+  exit 1
+fi
+docker build -t wasm-dev-env:$tagname .
